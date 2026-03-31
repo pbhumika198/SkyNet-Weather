@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SkyNet Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="app">
+  <h1>SkyNet Weather</h1>
+
+  <!-- Search -->
+  <div class="search-box">
+    <input type="text" id="cityInput" placeholder="Search city..." onkeyup="searchCity(this.value)">
+    <div id="suggestions"></div>
+  </div>
+
+  <!-- Current Weather -->
+  <h2>Current Weather</h2>
+  <div class="cards">
+    <div class="card">
+      <h3 id="city"></h3>
+      <img id="icon" />
+      <h2 id="temp"></h2>
+      <p id="desc"></p>
+      <p id="humidity"></p>
+      <p id="wind"></p>
+      <p id="pressure"></p>
+    </div>
+  </div>
+
+  <!-- Saved Cities -->
+  <h2>Recent Cities</h2>
+  <div id="cards" class="cards"></div>
+
+  <!-- Forecast -->
+  <h2>Forecast</h2>
+  <div id="forecast" class="forecast"></div>
+  <h2>Hourly Forecast</h2>
+<div id="hourly" class="hourly"></div>
+
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

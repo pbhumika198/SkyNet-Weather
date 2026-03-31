@@ -1,0 +1,94 @@
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* 📱 Mobile (max 600px) */
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .app {
+    padding: 10px;
+  }
+
+  /* Search */
+  .search-box input {
+    width: 100%;
+  }
+
+  #suggestions {
+    width: 100%;
+  }
+
+  /* Cards grid → 1 column */
+  .cards {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  /* Forecast scroll */
+  .forecast {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .forecast-card {
+    min-width: 100px;
+    font-size: 14px;
+  }
+
+  /* Hourly */
+  .hourly {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .hour-card {
+    min-width: 90px;
+    font-size: 13px;
+  }
+}
+
+
+/* 📱 Tablet (601px – 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-box input {
+    width: 80%;
+  }
+}
+
+
+/* 💻 Laptop (901px+) */
+@media (min-width: 901px) {
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .search-box input {
+    width: 300px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+button {
+  min-width: 60px;
+}
+body {
+  overflow-x: hidden;
+}
