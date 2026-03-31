@@ -37,7 +37,7 @@ A modern and responsive Weather Web Application built using **HTML, CSS, and Jav
 2. Navigate to project:
 
    ```bash
-   cd skynet-weather-app
+   cd SkyNet-Weather
    ```
 
 3. Open `index.html` in browser
