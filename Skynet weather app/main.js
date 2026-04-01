@@ -1,6 +1,6 @@
 const apiKey = "747d341913591615216420c92e245281";
 
-// ✅ Get Weather
+// Get Weather
 async function getWeather(cityInput = null) {
   const city = cityInput || document.getElementById("cityInput").value;
 
@@ -13,7 +13,7 @@ async function getWeather(cityInput = null) {
     const data = await res.json();
 
     if (data.cod !== 200) {
-      alert("City not found ❌");
+      alert("City not found ");
       return;
     }
 
@@ -22,11 +22,11 @@ async function getWeather(cityInput = null) {
     saveCity(city);
 
   } catch (error) {
-    alert("Error fetching weather ❌");
+    alert("Error fetching weather ");
   }
 }
 
-// ✅ Update UI
+// Update UI
 function updateUI(data) {
   document.getElementById("city").innerText = data.name;
   document.getElementById("temp").innerText = data.main.temp + "°C";
@@ -44,7 +44,7 @@ function updateUI(data) {
     `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 }
 
-// ✅ Forecast
+// Forecast
 async function getForecast(city) {
   const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -54,7 +54,7 @@ async function getForecast(city) {
   let forecastHTML = "";
   let hourlyHTML = "";
 
-  // ✅ 5-day forecast
+  // 5-day forecast
   data.list.slice(0, 5).forEach(item => {
     forecastHTML += `
       <div class="forecast-card">
@@ -64,7 +64,7 @@ async function getForecast(city) {
     `;
   });
 
-  // ✅ Hourly (next 12 hours)
+  //  Hourly (next 12 hours)
   data.list.slice(0, 8).forEach(item => {
     const time = new Date(item.dt_txt).toLocaleTimeString([], {
       hour: '2-digit',
@@ -120,7 +120,7 @@ async function searchCity(query) {
   }
 }
 
-// 💾 Save city
+// Save city
 function saveCity(city) {
   let cities = JSON.parse(localStorage.getItem("cities")) || [];
 
@@ -134,7 +134,7 @@ function saveCity(city) {
   showSavedCities();
 }
 
-// 📂 Show saved cities
+// Show saved cities
 function showSavedCities() {
   const cities = JSON.parse(localStorage.getItem("cities")) || [];
   const container = document.getElementById("cards");
@@ -152,7 +152,7 @@ function showSavedCities() {
   });
 }
 
-// 📍 GPS Weather
+// GPS Weather
 function getLocationWeather() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(async (position) => {
@@ -171,7 +171,7 @@ function getLocationWeather() {
   }
 }
 
-// 🚀 Load on start
+// Load on start
 window.onload = () => {
   showSavedCities();
 
