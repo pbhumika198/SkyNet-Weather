@@ -7,9 +7,7 @@ A modern and responsive Weather Web Application built using **HTML, CSS, and Jav
 ## Features
 
 * Search city with auto-suggestions
-* Get weather using current location (GPS)
 * Real-time weather data (temperature, humidity, wind, pressure)
-* Hourly weather forecast
 * 5-day forecast
 * Recently searched cities (LocalStorage)
 * Modern UI with glassmorphism & animations
